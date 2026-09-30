@@ -1,0 +1,6 @@
+{
+  "name": "동물의 숲 정당 탐구 아카데미 - 스마트 학습지",
+  "description": "모여봐요 동물의 숲 테마의 사회과 정당 기본개념 및 사례 탐구 인터랙티브 학습지. 키워드 기반 자동 채점, A~E 등급 산출, 임시저장 및 구글 스프레드시트/앱스 스크립트 연동 지원.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

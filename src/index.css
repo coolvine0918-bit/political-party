@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f6f4ea;
+    background-image: radial-gradient(#88c05718 1.5px, transparent 1.5px), radial-gradient(#5da9e912 1.5px, #f6f4ea 1.5px);
+    background-size: 36px 36px;
+    background-position: 0 0, 18px 18px;
+    color: #43382c;
+  }
+
+  h1, h2, h3, .font-ac-title {
+    font-family: 'Jua', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-ac-hand {
+    font-family: 'Gamja Flower', cursive, sans-serif;
+  }
+}
+
+/* Animal Crossing Custom UI Accents */
+.ac-card {
+  background-color: #ffffff;
+  border: 3px solid #e2d9c2;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 0 #d5caa9, 0 12px 20px -4px rgba(60, 40, 20, 0.08);
+}
+
+.ac-card-header {
+  border-bottom: 2px dashed #e8e0cc;
+}
+
+.ac-btn-primary {
+  background-color: #79c546;
+  border: 3px solid #5a9e30;
+  box-shadow: 0 5px 0 #487e27;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.ac-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #487e27;
+  background-color: #82d24b;
+}
+
+.ac-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #487e27;
+}
+
+.ac-btn-secondary {
+  background-color: #4faee8;
+  border: 3px solid #368bbd;
+  box-shadow: 0 5px 0 #28698f;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.ac-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #28698f;
+  background-color: #5bbbf6;
+}
+
+.ac-btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #28698f;
+}
+
+.ac-btn-wood {
+  background-color: #f7a631;
+  border: 3px solid #c97918;
+  box-shadow: 0 5px 0 #9f5b0b;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.ac-btn-wood:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #9f5b0b;
+  background-color: #ffb13d;
+}
+
+.ac-btn-wood:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #9f5b0b;
+}
+
+/* Speech bubble */
+.ac-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 3px solid #e0d5be;
+  border-radius: 1.25rem;
+}
+
+.ac-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 28px;
+  border-width: 12px 10px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+}
+
+.ac-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 26px;
+  border-width: 14px 12px 0;
+  border-style: solid;
+  border-color: #e0d5be transparent;
+  display: block;
+  width: 0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7beaa;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a89e88;
+}
+
+/* Submit button loading shimmer & pulse */
+@keyframes submit-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-submit-loading {
+  background: linear-gradient(
+    90deg,
+    #4a9b23 0%,
+    #69cb3f 25%,
+    #98ed68 50%,
+    #69cb3f 75%,
+    #4a9b23 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: submit-shimmer 1.4s infinite linear !important;
+  box-shadow: 0 0 18px rgba(105, 203, 63, 0.7), 0 3px 0 #336b17 !important;
+}
